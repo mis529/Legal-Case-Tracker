@@ -68,7 +68,7 @@ export interface Case {
   title: string;
   status: CaseStatus;
   direction: CaseDirection;
-  type: string; // Changed to string to support dynamic types
+  type: string; 
   courtType: CourtType;
   court: string;
   department?: string;
@@ -82,4 +82,4 @@ export interface Case {
   comments: Comment[];
 }
 
-export type ViewState = 'dashboard' | 'caseList' | 'caseDetail' | 'financials' | 'addCase' | 'advocates' | 'addAdvocate';
+export type ViewState = 'landing' | 'dashboard' | 'caseList' | 'caseDetail' | 'financials' | 'addCase' | 'advocates' | 'addAdvocate';
