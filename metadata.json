@@ -1,0 +1,8 @@
+{
+  "name": "Legal Case Tracker",
+  "description": "A comprehensive legal case management system for tracking litigation status, court schedules, advocate fees, and procedural actions with AI-powered insights.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
