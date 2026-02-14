@@ -82,4 +82,4 @@ export interface Case {
   comments: Comment[];
 }
 
-export type ViewState = 'landing' | 'dashboard' | 'caseList' | 'caseDetail' | 'financials' | 'addCase' | 'advocates' | 'addAdvocate';
+export type ViewState = 'dashboard' | 'caseList' | 'caseDetail' | 'financials' | 'addCase' | 'advocates' | 'addAdvocate';

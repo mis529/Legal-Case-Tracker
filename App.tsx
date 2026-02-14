@@ -2,7 +2,6 @@
 import React, { useState, useMemo } from 'react';
 import { Case, ViewState, CaseStatus, CaseType, CaseDirection, CourtType, Advocate, FinancialEntry } from './types';
 import { ICONS } from './constants';
-import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
 import CaseList from './components/CaseList';
 import CaseDetail from './components/CaseDetail';
@@ -65,7 +64,7 @@ const MOCK_CASES: Case[] = [
 ];
 
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<ViewState>('landing');
+  const [currentView, setCurrentView] = useState<ViewState>('dashboard');
   const [cases, setCases] = useState<Case[]>(MOCK_CASES);
   const [advocates, setAdvocates] = useState<Advocate[]>(MOCK_ADVOCATES);
   const [caseTypes, setCaseTypes] = useState<string[]>(Object.values(CaseType));
@@ -120,16 +119,12 @@ const App: React.FC = () => {
     </button>
   );
 
-  if (currentView === 'landing') {
-    return <LandingPage onLaunch={() => setCurrentView('dashboard')} />;
-  }
-
   return (
     <div className="flex h-screen bg-slate-50 overflow-hidden">
       {/* Sidebar */}
       <aside className="w-64 border-r border-slate-200 bg-white flex flex-col p-6 space-y-8 hidden md:flex">
         <div 
-          onClick={() => setCurrentView('landing')}
+          onClick={() => setCurrentView('dashboard')}
           className="flex items-center space-x-3 px-2 cursor-pointer hover:opacity-80 transition-opacity"
         >
           <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">
